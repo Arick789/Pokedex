@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+body{
+    height: 100vh;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+.container{
+    width: 1200px;
+    height: 900px;
+    background-image: url(./sources/FONDO.png);
+    background-size: contain;
+}
+
+.cards{
+    height: 81%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card.one{
+    height: 700px;
+    width: 320px;
+    background-image: url(./sources/Pokédex_logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-left: 20%;
+    transition: 0.5s;
+}
+
+.card.one:hover{
+    transform: scale(1.1);
+}
+
+.card.two{
+    margin-top: 5%;
+}
+
+.card.three{
+    margin-top: 5%;
+    margin-right: 20%;
+}
+
+input,button{
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+#pokemonInput1, #pokemonInput2{
+    margin-top: 20px;
+}
+
+.pk-img{
+    height: 300px;
+    transition: 0.5s;
+}
+
+.pk-img:hover{
+    transform: scale(1.2);
+}
+
+.pk-name{
+    color: white;
+    font-size: 1.7rem;
+}
+
+.pk-ms{
+    color: white;
+    font-size: 1.2rem;
+}
+
+.btn-1{
+    color: #fff;
+    border-radius: 40px;
+    box-shadow: 0 0 0 0 rgba(145, 64, 248, 0.5), 0 0 0 0 rgba(39, 200, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    overflow: hidden;
+    position: relative;
+
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    background-size: cover;
+}
+
+.btn-1::after{
+    content: "";
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: -50px;
+    left: -100px;
+    background: #13ff13;
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    z-index: -1;
+    transition: transform 0.5s ease;
+}
+
+.btn-1:hover{
+    transform: translate(0, -6px);
+    box-shadow: 5px -5px 12.5px 0 rgba(16, 226, 253, 0.5), -5px 5px 12.5px 0 rgba(183, 0, 255, 0.7);
+}
+
+.btn-1:hover::after{
+    transform: rotate(150deg);
+}
+
+.btn-2{
+    color: #fff;
+    border-radius: 40px;
+    box-shadow: 0 0 0 0 rgba(145, 64, 248, 0.5), 0 0 0 0 rgba(39, 200, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    overflow: hidden;
+    position: relative;
+
+    background-image: linear-gradient(to top, #9795f0 0%, #fbc8d4 100%);
+    background-size: cover;
+}
+
+.btn-2::after{
+    content: "";
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: -50px;
+    left: -100px;
+    background: #13ff13;
+    background-image: linear-gradient(to top, #9795f0 0%, #fbc8d4 100%);
+    z-index: -1;
+    transition: transform 0.5s ease;
+}
+
+.btn-2:hover{
+    transform: translate(0, -6px);
+    box-shadow: 5px -5px 12.5px 0 rgba(16, 226, 253, 0.5), -5px 5px 12.5px 0 rgba(183, 0, 255, 0.7);
+}
+
+.btn-2:hover::after{
+    transform: rotate(150deg);
+}
+
+.input-container {
+    width: 250px;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+}
+
+.pokemon-input {
+    width: 250px;
+    line-height: 20px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: black;
+    font-size: 16px;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    box-shadow: inset 2px 0px 0px 0px #fff;
+    transition: all 200ms ease;
+}
+
+.pokemon-input:focus, .pokemon-input:valid {
+    box-shadow: inset 250px 0px 0px 0px #fff;
+    color: #111;
+    border-radius: 10px;
+    padding: 10px 15px;
+    line-height: 20px;
+    transform: scale(1.2);
+}
